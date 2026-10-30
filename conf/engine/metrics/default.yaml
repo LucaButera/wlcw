@@ -1,0 +1,4 @@
+mae:
+  _target_: "tsl.metrics.torch.MaskedMAE"
+mse:
+  _target_: "tsl.metrics.torch.MaskedMSE"

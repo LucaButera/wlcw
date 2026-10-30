@@ -1,0 +1,35 @@
+defaults:
+  - experiment
+  - override model: moderntcn
+  - override gpi: patchtst
+  - override dataset: climate_ush
+  - _self_
+
+figure: "figure7-8"
+
+trainer:
+  limit_train_batches: 1200
+  max_epochs: 50
+engine:
+  optim_kwargs:
+    lr: 0.00025
+dataset:
+  batch_size: 2560
+  workers: 20
+  history: 720
+  history_first_sample_shift: 336
+
+model:
+  hidden_size: 64
+gpi:
+  emb_size: 64
+  hidden_size: 16
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1,2,3
+      dataset.target_dims: T2M,ALLSKY_SFC_SW_DWN
+      dataset.history: 720
+      dataset.window: 720,336,168,72,24,12,8

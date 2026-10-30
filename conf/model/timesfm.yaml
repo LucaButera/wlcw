@@ -1,0 +1,4 @@
+_target_: "src.nn.models.temporal.timesfm.TimesFMModel"
+gpi: "${gpi}"
+
+window: "${dataset.window}"

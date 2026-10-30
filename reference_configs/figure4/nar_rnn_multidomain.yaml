@@ -1,0 +1,31 @@
+defaults:
+  - experiment
+  - override engine: predictor_multitask
+  - override model: rnn
+  - override gpi: none
+  - override dataset: nar_multitask
+  - _self_
+
+figure: "figure4"
+
+trainer:
+  max_epochs: 50
+engine:
+  optim_kwargs:
+    lr: 0.01
+dataset:
+  batch_size: 16384
+  workers: 20
+  window: 2
+  sigma_noise: 0.2
+model:
+  hidden_size: 16
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1,2,3
+      dataset/datamodules: "[nar1],[nar2],[nar4],[nar6],[nar1,nar2],[nar2,nar4],[nar2,nar6],[nar2,nar4,nar6]"
+      model.hidden_size: 16
+      dataset.window: 100,50,30,20,10,6,2

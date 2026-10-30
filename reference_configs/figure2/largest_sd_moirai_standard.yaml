@@ -1,0 +1,30 @@
+defaults:
+  - experiment
+  - override model: moirai
+  - override gpi: none
+  - override dataset: largest_sd
+  - _self_
+
+figure: "figure2"
+
+dataset:
+  window: 24
+  horizon: 24
+  batch_size: 2560
+  workers: 20
+  history: 720
+  history_first_sample_shift: 336
+  add_temporal_encoding: false
+  mask_as_exogenous: false
+  transductive_only: true
+
+model:
+  history: "${dataset.history}"
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1
+      dataset.window: 720,336,168,72,24
+      dataset.history: 0

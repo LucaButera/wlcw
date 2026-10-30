@@ -1,0 +1,18 @@
+nar4:
+  _target_: "src.data.datamodules.temporal.nar.NARInductiveDataModule"
+  num_nodes: "${dataset.num_nodes}"
+  num_steps: "${dataset.num_steps}"
+  order: 4
+  alpha: "${dataset.alpha}"
+  sigma_noise: "${dataset.sigma_noise}"
+  seed: 45
+  window: "${dataset.window}"
+  horizon: "${dataset.horizon}"
+  batch_size: "${dataset.batch_size}"
+  history: "${dataset.history}"
+  history_first_sample_shift: "${dataset.history_first_sample_shift}"
+  train_len: "${dataset.train_len}"
+  val_len: "${dataset.val_len}"
+  test_len: "${dataset.test_len}"
+  val_nodes: "${dataset.val_nodes}"
+  test_nodes: "${dataset.test_nodes}"

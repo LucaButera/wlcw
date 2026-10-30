@@ -1,0 +1,26 @@
+defaults:
+  - experiment
+  - override model: patchtst
+  - override gpi: none
+  - override dataset: largest_sd
+  - _self_
+
+figure: "figure7-8"
+
+trainer:
+  limit_train_batches: 2880
+  max_epochs: 50
+engine:
+  optim_kwargs:
+    lr: 0.001
+dataset:
+  history: 0
+  batch_size: 2560
+  workers: 20
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1,2,3
+      dataset.window: 720,336,168,72,24,12,8

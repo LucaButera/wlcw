@@ -1,0 +1,17 @@
+defaults:
+  - commons
+  - _self_
+  - datamodules: null
+
+horizon: 24
+window: 24
+add_temporal_encoding: false
+mask_as_exogenous: false
+transductive_only: false
+workers: 0
+
+# Multitask custom behavior
+combine_mode: "max_size_cycle"
+test_separately: true
+
+_target_: "src.data.prototypes.multi_inductive_temporal_datamodule.MultiInductiveTemporalDataModule"

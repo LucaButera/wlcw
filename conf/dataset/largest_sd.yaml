@@ -1,0 +1,17 @@
+defaults:
+  - commons
+  - _self_
+
+_target_: "src.data.datamodules.temporal.largest.LargeSTInductiveDataModule"
+window: 12
+horizon: 12
+
+subset: SD
+freq: 1H
+
+train_len: [0, 6132]
+val_len: ["${math: '6132 - ${dataset.history} - ${dataset.window}'}", 7008]
+test_len: ["${math: '7008 - ${dataset.history} - ${dataset.window}'}", 8760]
+
+val_nodes: 0.1
+test_nodes: 0.1

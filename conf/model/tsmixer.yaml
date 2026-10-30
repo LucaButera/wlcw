@@ -1,0 +1,7 @@
+_target_: "src.nn.models.temporal.tsmixer.TSMixerModel"
+gpi: "${gpi}"
+
+window: "${dataset.window}"
+dropout: 0.1
+num_blocks: 2
+hidden_size: 64

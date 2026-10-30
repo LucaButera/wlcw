@@ -1,0 +1,4 @@
+_target_: "src.nn.models.temporal.chronos.Chronos2Model"
+gpi: "${gpi}"
+
+window: "${dataset.window}"

@@ -1,0 +1,20 @@
+defaults:
+  - commons
+  - _self_
+  - datamodules: null
+
+horizon: 1
+window: 6
+history: 0
+num_nodes: 500
+num_steps: 5000
+alpha: 1.0
+sigma_noise: 0.1
+
+train_len: [0, 3500]
+val_len: ["${math: '3500 - ${dataset.history} - ${dataset.window}'}", 4000]
+test_len: ["${math: '4000 - ${dataset.history} - ${dataset.window}'}", 5000]
+val_nodes: 0.1
+test_nodes: 0.2
+
+_target_: "src.data.prototypes.multi_inductive_temporal_datamodule.MultiInductiveTemporalDataModule"

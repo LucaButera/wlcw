@@ -1,0 +1,21 @@
+clm_us_r:
+  _target_: "src.data.datamodules.temporal.climate_nasa.ClimateNASAInductiveDataModule"
+  time_res: hourly
+  space_res: us
+  target_dims: ALLSKY_SFC_SW_DWN
+  exogenous_dims: null
+  temporal_encoding_type: day
+  window: "${dataset.window}"
+  horizon: "${dataset.horizon}"
+  batch_size: "${dataset.batch_size}"
+  history: "${dataset.history}"
+  history_first_sample_shift: "${dataset.history_first_sample_shift}"
+  add_temporal_encoding: "${dataset.add_temporal_encoding}"
+  mask_as_exogenous: "${dataset.mask_as_exogenous}"
+  transductive_only: "${dataset.transductive_only}"
+  workers: "${dataset.workers}"
+  train_len: [0, 17520]
+  val_len: ["${math: '17520 - ${dataset.history} - ${dataset.window}'}", 21912]
+  test_len: ["${math: '21912 - ${dataset.history} - ${dataset.window}'}", 26304]
+  val_nodes: 0.1
+  test_nodes: 0.2

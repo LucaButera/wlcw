@@ -1,0 +1,27 @@
+defaults:
+  - experiment
+  - override engine: predictor_multitask
+  - override model: patchtst
+  - override gpi: none
+  - override dataset: real_multitask
+  - _self_
+
+figure: "figure5-6"
+
+trainer:
+  limit_train_batches: 720
+  max_epochs: 50
+engine:
+  optim_kwargs:
+    lr: 0.001
+dataset:
+  batch_size: 2560
+  workers: 20
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1,2,3
+      dataset/datamodules: "[largest,clm_us_t,clm_us_r]"
+      dataset.window: 720,336,168,72,24

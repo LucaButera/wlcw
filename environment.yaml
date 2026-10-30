@@ -1,0 +1,37 @@
+name: wlcw
+channels:
+  - pyg
+  - pytorch
+  - nvidia
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12.*
+  - pytorch:pytorch=2.4.*
+  - lightning=2.4.*
+  - hydra-core=1.3.*
+  - numpy>1.20.3, <2
+  - pandas>=1.4, <3
+  - pytables
+  - matplotlib
+  - tqdm
+  - openpyxl
+  - einops
+  - pyyaml
+  - scikit-learn
+  - scipy
+  - torchmetrics>=0.7
+  - huggingface_hub<1
+  - safetensors
+  - transformers=4.*
+  - accelerate
+  - ninja
+  - pyg:pyg=*=*cu*
+  - pyg:pytorch-scatter
+  - pyg:pytorch-sparse
+  - pytorch:pytorch-cuda=12.1
+  - tensorboard
+  - setuptools<80
+  - pip
+  - pip:
+    - git+https://github.com/LucaButera/tsl.git

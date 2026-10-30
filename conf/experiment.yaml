@@ -1,0 +1,27 @@
+defaults:
+  - engine: predictor
+  - model: rnn
+  - gpi: none
+  - dataset: largest_sd
+  - _self_
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: "outputs/${oc.select:figure,misc}/${hydra.job.config_name}/${now:%Y-%m-%d_%H-%M-%S}"
+  sweep:
+    dir: "outputs/${oc.select:figure,misc}/${hydra.job.config_name}/${now:%Y-%m-%d_%H-%M-%S}"
+    subdir: "${hydra.job.override_dirname}"
+
+trainer:
+  logger: tensorboard
+  limit_train_batches: 600
+  max_epochs: 200
+  gradient_clip_val: 5
+  monitor: "val/loss"
+  patience: 8
+
+matmul_precision: medium
+
+seed: 42

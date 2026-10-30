@@ -1,0 +1,20 @@
+defaults:
+  - commons
+  - _self_
+
+_target_: "src.data.datamodules.temporal.climate_nasa.ClimateNASAInductiveDataModule"
+target_dims: T2M
+exogenous_dims: null
+time_res: hourly
+space_res: us
+temporal_encoding_type: day
+
+window: 24
+horizon: 24
+
+train_len: [0, 17520]
+val_len: ["${math: '17520 - ${dataset.history} - ${dataset.window}'}", 21912]
+test_len: ["${math: '21912 - ${dataset.history} - ${dataset.window}'}", 26304]
+
+val_nodes: 0.1
+test_nodes: 0.2

@@ -1,0 +1,5 @@
+gpi: "${gpi}"
+hidden_size: 64
+
+_target_: "src.nn.models.temporal.rnn.RNNModel"
+layer_norm: false

@@ -1,0 +1,5 @@
+_target_: "src.nn.models.temporal.moirai.MoiraiModel"
+gpi: "${gpi}"
+
+window: "${dataset.window}"
+point_predictions: true

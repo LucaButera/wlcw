@@ -1,0 +1,11 @@
+_target_: "src.nn.models.temporal.patchtst.PatchTSTModel"
+gpi: "${gpi}"
+
+window: "${dataset.window}"
+patch_len: 16
+stride: 8
+num_heads: 4
+dim_feedforward: 128
+dropout: 0.2
+num_encoder_layers: 3
+hidden_size: 16

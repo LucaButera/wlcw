@@ -1,0 +1,22 @@
+defaults:
+  - commons
+  - _self_
+
+_target_: "src.data.datamodules.temporal.multi_pvarx.MultiPVARXInductiveDataModule"
+
+num_nodes: 1000
+num_steps: 10000
+num_features: 1
+temporal_order: 2
+coeff_bound: 1.0
+sigma_noise: 0.2
+seed: 42
+target_dims: 0
+exogenous_dims: null
+
+mask_as_exogenous: false
+
+batch_size: 128
+
+window: 6
+horizon: 1

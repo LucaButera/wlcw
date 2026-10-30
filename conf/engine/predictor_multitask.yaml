@@ -1,0 +1,19 @@
+defaults:
+  - metrics: default
+  - _self_
+
+_target_: "src.engines.multitask_temporal_predictor.MultiTaskTemporalPredictor"
+model: "${model}"
+optim_class:
+  _target_: "hydra.utils.get_class"
+  path: "torch.optim.Adam"
+optim_kwargs:
+  lr: 0.00075
+scheduler_class:
+  _target_: "hydra.utils.get_class"
+  path: "torch.optim.lr_scheduler.ReduceLROnPlateau"
+scheduler_kwargs:
+  patience: 5
+  monitor: "${trainer.monitor}"
+loss_fn:
+  _target_: "tsl.metrics.torch.MaskedMSE"

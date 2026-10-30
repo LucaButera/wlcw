@@ -1,0 +1,14 @@
+_target_: "src.nn.models.temporal.moderntcn.ModernTCNModel"
+gpi: "${gpi}"
+
+window: "${dataset.window}"
+patch_len: 8
+stride: 4
+downsample_ratio: 2
+ff_hidden_size_ratio: 8
+num_stages: 4
+num_blocks: 1
+large_kernel_size: 51
+small_kernel_size: 5
+hidden_size: 64
+dropout: 0.1

@@ -1,0 +1,35 @@
+defaults:
+  - experiment
+  - override model: rnn
+  - override gpi: rnn
+  - override dataset: multi_pvarx
+  - _self_
+
+figure: "figure3"
+
+trainer:
+  limit_train_batches: null
+  max_epochs: 50
+engine:
+  optim_kwargs:
+    lr: 0.01
+dataset:
+  window: 2
+  horizon: 1
+  batch_size: 16384
+  workers: 20
+  history: 46
+  history_first_sample_shift: 50
+
+gpi:
+  emb_size: "${model.hidden_size}"
+model:
+  hidden_size: 64
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 1,2,3
+      model.hidden_size: 16,8,4
+      dataset.window: 48,6,2

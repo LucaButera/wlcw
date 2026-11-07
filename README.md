@@ -1,8 +1,8 @@
 # Why Do Time Series Models Need Long Context Windows? (NeurIPS 2026)
 
-[![NeurIPS 2026](https://img.shields.io/badge/NeurIPS_2026-OpenReview-blue.svg?style=flat-square)](#)
-[![PDF](https://img.shields.io/badge/%E2%87%A9-PDF-orange.svg?style=flat-square)](#)
-[![arXiv](https://img.shields.io/badge/arXiv-2606.01999-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2606.01999)
+[![NeurIPS](https://img.shields.io/badge/NeurIPS-2026-916ba4.svg?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAGb0lEQVR42u2WbXBU5RXH/%2Bfc3c1m89qSgmI7GmQaBgQCAUuntQuE0qhMP7Ts2lYEOmUCSSS0jQkdnfHmjgpVg%2BFVApVaSaw2O%2B0HbR06RN6sSjGgtGUHkGqjgMISEgKbze7e55x%2BKGB4KSU1fmrPp3ufe%2Bd5fud/3h7gf91oID/bsDkWRCDp843ftPWh1xdOb5jv83jrxMTvcMmziBSTOj//1uwhp78yLjNOBxt31yQ%2BFYBt2xyNjqFIJGzmfNUe2vKmc7KitOGegD/3xXPJrrstWMn87GFt3fFTE4y4DoA7oMmxzP6jEAlnZ%2BuW%2BJlejQ2NJiKRiADQy8%2BwrgWwc%2BdOjUYjurD0yam5Wfk7J9wcPMVCrwlktqh8Q5g2nU2caYZFcVKM96hUr9/24OHJhd/MN6y70mn%2BjVr%2B7s2/b/xLKBSyotHo9QEolGCDi3yzZk0snD7WTWC/5UWtqAxv2la3YsyNE1q8VtaHIBnl92R%2BX8SdrSTtSnTnhMJpB0mtzI2v1v1hYuHMW0DSW1I44658d8Tbe45sSQ4oBAtLn2gvyL2ppLPn2MOum3qZvf5sNibWtH3pofIZT75DQs8S6RdBuA0wjgqXGuUtFuscFbxGlo5g0b3CdGc6oI%2BczehNRiL1aYD0mgosLluVMfnWaeNNmrekTSJXIDmW5T1O0O96vf5NEwqn9TJoPxmKNm2vXV9yy8wkEQ9jcIxEepXxNy9rl8JKAfQ9InmZU1ZjoNfzXvv7X%2B/4twrYsHl4%2BXBr/z/i4YAvp6Wnr2vTxra6BRe%2B/7Bs1Rf8Jv2Kim4TkoiPMuYaSb0khB8R%2BAUiyWDBUReUseHV2h0AUD7j8UkEnGFgOMAjDOSvG9uWtl8BoFCKhCL88bDUlK7TCXx0oruGGJbH8oVT6b7ZRNapprYH/rgg%2BESxD/Ej4smuYOahrsqOrHO8rXF3TV//LFco1aOeHDhyYa18ZsMoVi1u2lr74oU1zyckpPbo7TQkdqxE8vN%2B6ca6a57ZWvs%2BACwqfbxCIXnlwYa95NFpSSv3nMeYKbGtu8MRREz/soVzcT8BoLZts%2BPUaygU5o2RBw6WBxtOXTUEtm1z7qkvhzN9zHv3fRAoyBv6i57e2Or1bXVLFt9u5yaH5vg4boaAabvryu3P7PzZ0VCo1RodOaAOHL1ajV%2BtuqhfAl6igOM48lRF81nXYOrHp7uWZWdmlQnoDACs2eP0nIc8feyN7K9lZmbGFEoUITOwtkt63mm9QoFVlZvLlKkYRmNscX712jkrLlVKgcvoB8P4woNx6aQKdTIxK1G7HbQ9dnC756J65w%2B3YfNnMoxW3t9SB0WRqu6xwEOqn753GQCoKhENvudXVoFBsSg9FwjQ3kRCChurnv8WEXKJKKK2MjkknwXARTkF5hFlU5BMoBiEZczyIRH61la23EwOiW0PrvRXABDzKxZRXSI78WcoHhSjOWR0vEs69eflG/LGRMeQQmmwQS5uliadnpb0rKx4roLxbQI/dEPMtxyq4zK8WY%2BGI2FDIHWcf3W2wQL5JAmrfz2MjNnPxH5RsxygNLM1xTWptV54OlzSJlhay4J459q/d/RvsYOigGvSeQDvEJEFruK3CoyEYpYXgX0skgBwmAx9R4SecuBI46LmIoXSoClwwVZXbp6vxIvAXCEmNYrhKQNpAcTzmMvmrIe1Ay4Wg6nK9flurWkMJxQguo5WfE0AhVK9HfF%2BLpY8RER9DC5NizvHYkoJ8B6pBi32lqSNu8yCJPs4/e7SdQuOD14VgNRxwil4JOj6fBONmJDP41sWhzT/ZN19LxFZQSW9MZ1Mvuk3me9kcdbyFZWbRyqUWkOt1n8bDrrKuwKglVXNHcxW4Jyki5LnTniHBG66zYUp/un6uQ0rK341zuv1v5VGsvTHq%2Bf9aVBzwLZtrq%2Bv15X3twRh8JFxRfPz8t%2BI9/U8CkYUkNiSNfPePq%2BeNFa2FGf6/A/HU711NU/PPWLD5oFUyH%2BUbU3V8%2BUF%2BTdsONl1PARgsgBlAbd3UtIXuMeI9S5Ui0YMH/lcx4nDP6hee98LraFWKxwJm08N0BpqtQ6MPqD%2Bk8PyPCYwtnbj/F2rqlo%2BsCzvl4yaiTn%2BnH098e7XycJdDM9iSKpp8bp5nZfP%2B%2BseRpdbPy%2B6AOwCAFE0kJuE300ciivtJeLfLVlzbw%2BAxy65%2BPzfBmD/BFtUC1BdJU3aAAAAAElFTkSuQmCC)](https://neurips.cc/virtual/2026/loc/paris/poster/149819)
+[![PDF](https://img.shields.io/badge/Paper-PDF-F59E0B.svg?style=flat&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNNSAxaDlsNSA1djE2SDV6TTE0IDF2NWg1TTEyIDl2OW0tNC00IDQgNCA0LTQiLz48L2c+PC9zdmc+)](https://openreview.net/pdf?id=n51PuFNKYi)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.01999-b31b1b.svg?style=flat&logo=arxiv)](https://arxiv.org/abs/2606.01999)
 
 This repository contains the code and configurations to reproduce the experiments in the main text of the paper **"Why Do Time Series Models Need Long Context Windows?"** (NeurIPS 2026).  
 We study how forecasting models trained on multiple time series, such as foundation models, can benefit from long input windows. We show longer observation windows are useful not only to capture long-range dependencies, but also because they allow to reduce the uncertainty about which process generated the input time series. We discuss the implications of this perspective and show how the insight it provides can be used to design more efficient forecasting models.
@@ -137,8 +137,9 @@ If you find this repository or research useful in your work, please consider cit
 ```bibtex
 @inproceedings{butera2026why,
   title={Why Do Time Series Models Need Long Context Windows?},
-  author={Butera, Luca and De Felice, Giovanni and Cini, Andrea and Alippi, Cesare},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-  year={2026}
+  author={Luca Butera and Giovanni De Felice and Andrea Cini and Cesare Alippi},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+  year={2026},
+  url={https://openreview.net/forum?id=n51PuFNKYi}
 }
 ```
